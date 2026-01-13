@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.nav-link {
+  @apply text-sm font-medium text-white/80 hover:text-white transition;
+}
