@@ -19,7 +19,7 @@ const Login = () => {
         e.preventDefault();
         try {
             await register(form);
-            navigate("/login");
+            navigate("/dashboard");
         } catch {
             alert("Invalid credentials");
         }
