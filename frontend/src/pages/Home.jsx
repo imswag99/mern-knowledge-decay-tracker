@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import AuraBackground from "../components/AuraBackground";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -34,15 +35,16 @@ const Home = () => {
                                 actually sticks.
                             </p>
 
-                            <motion.a
-                                whileHover={{ scale: 1.05 }}
-                                href={"/dashboard"}
-                                className="inline-block px-8 py-4 rounded-xl
+                            <motion.div whileHover={{ scale: 1.05 }}>
+                                <Link
+                                    to={"/dashboard"}
+                                    className="inline-block px-8 py-4 rounded-xl
                          bg-linear-to-r from-indigo-500 to-purple-600
                          font-semibold shadow-lg"
-                            >
-                                Start Tracking Knowledge
-                            </motion.a>
+                                >
+                                    Start Tracking Knowledge
+                                </Link>
+                            </motion.div>
                         </motion.div>
 
                         {/* Image */}
