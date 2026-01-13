@@ -89,7 +89,7 @@ const Login = () => {
                     className="w-full py-3 rounded-xl font-semibold
           bg-linear-to-r from-indigo-500 to-purple-600 shadow-lg cursor-pointer"
                 >
-                    {loading ? "Logging in..." : "Login"}
+                    {loading ? "Registering..." : "Register"}
                 </motion.button>
             </motion.form>
             <h1 className="mt-5 text-white text-center">
