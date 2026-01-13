@@ -7,8 +7,8 @@ Instead of treating learning as a static checklist, MindTrace introduces **memor
 ---
 
 ## 🚀 Live Demo
-👉 Frontend: https://your-vercel-app.vercel.app  
-👉 Backend API: https://your-render-backend.onrender.com
+👉 Frontend: https://mern-knowledge-decay-tracker.vercel.app  
+👉 Backend API: https://mern-knowledge-decay-tracker.onrender.com
 
 ---
 
