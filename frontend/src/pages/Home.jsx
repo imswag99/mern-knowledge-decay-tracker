@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import AuraBackground from "../components/AuraBackground";
+import { useAuth } from "../context/AuthContext";
 
 const Home = () => {
+    const { user } = useAuth();
     return (
         <AuraBackground>
             <div className="text-white">
@@ -36,7 +38,7 @@ const Home = () => {
 
                             <motion.a
                                 whileHover={{ scale: 1.05 }}
-                                href="/dashboard"
+                                href={!user ? "/login" : "/dashboard"}
                                 className="inline-block px-8 py-4 rounded-xl
                          bg-linear-to-r from-indigo-500 to-purple-600
                          font-semibold shadow-lg"
