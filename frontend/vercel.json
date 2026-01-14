@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://mern-knowledge-decay-tracker.onrender.com" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
