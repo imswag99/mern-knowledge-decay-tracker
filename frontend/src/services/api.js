@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://mern-knowledge-decay-tracker.onrender.com/api",
+  baseURL: "/api",
   withCredentials: true, // cookies enabled
 });
 
