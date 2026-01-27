@@ -26,18 +26,24 @@ export const calculateCurrentStrength = (item) => {
 };
 
 export const generateDecayTimeline = (item, totalDays = 30) => {
-    const { baseStrength, difficulty } = item;
+    const { baseStrength, lastRevisedAt, difficulty } = item;
 
     const decayRate = difficultyDecayMap[difficulty] || 0.05;
+
+    // Days passed since last revision
+    const daysPassed =
+        (Date.now() - new Date(lastRevisedAt)) / millisecondsPerDay;
+
+    // Strength today
+    const currentStrength = baseStrength * Math.exp(-decayRate * daysPassed);
 
     const timeline = [];
 
     for (let day = 0; day <= totalDays; day++) {
-        // pretend "today" is lastRevisedAt + day
-        const strength = baseStrength * Math.exp(-decayRate * day);
+        const strength = currentStrength * Math.exp(-decayRate * day);
 
         timeline.push({
-            day, // Day number
+            day, // day 0 = today
             strength: Math.max(0, Math.round(strength)),
         });
     }
